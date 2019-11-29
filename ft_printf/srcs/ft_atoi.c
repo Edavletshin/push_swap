@@ -6,7 +6,7 @@
 /*   By: galiza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 12:06:27 by galiza            #+#    #+#             */
-/*   Updated: 2019/05/25 15:04:00 by galiza           ###   ########.fr       */
+/*   Updated: 2019/11/29 19:06:10 by galiza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ int		ft_atoi_base(const char *str, int base)
 	minus = 0;
 	i = 0;
 	total = 0;
+	if (str == 0)
+		return (0);
 	i = set_length_to_int(str, &minus);
 	while ((str[i] >= 48 && str[i] <= 57) ||
 			(str[i] + (base - 15) > 'A' && str[i] + (15 - base) < 'F')
