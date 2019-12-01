@@ -6,7 +6,7 @@
 /*   By: galiza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 17:05:37 by galiza            #+#    #+#             */
-/*   Updated: 2019/11/09 17:58:40 by galiza           ###   ########.fr       */
+/*   Updated: 2019/12/01 19:48:06 by galiza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,12 @@ int		main(int ac, char **av)
 				error(my_s);
 			else
 				free_struct(my_s);
-			return (0);
 		}
-		start_sorting(my_s);
-		free_struct(my_s);
+		else
+		{
+			start_sorting(my_s);
+			free_struct(my_s);
+		}
 		if (ac != 2)
 			ft_strdel(&s);
 	}
